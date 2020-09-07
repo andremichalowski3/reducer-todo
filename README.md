@@ -17,11 +17,11 @@
   - [x] Make an initial commit
 
   ### Task 1B: Setup Github + Install dependencies
-  - [] Push commits: git push origin `<firstName-lastName>`.
-  - [] Make pull request and add your team lead as collaborator on Github.
-  - [] Create a new react app running `npx create-react-app todo --use-npm`.
-    - [] CD into the react app directory `cd todo`.
-    - [] Start up the app using `npm start`.
+  - [x] Push commits: git push origin `<firstName-lastName>`.
+  - [x] Make pull request and add your team lead as collaborator on Github.
+  - [x] Create a new react app running `npx create-react-app todo --use-npm`.
+    - [x] CD into the react app directory `cd todo`.
+    - [x] Start up the app using `npm start`.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
