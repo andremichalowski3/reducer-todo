@@ -28,6 +28,17 @@ export const initialState = [
           completed: false,
           id: Date.now()}
         ]
+
+      case 'TOGGLE_TASK':
+        console.log('TOGGLE_TASK in toDoReducer');
+        let idSelectorArray = state.map(task => {
+          if(action.payload === task.id) {
+            return {...task, completed: !task.completed}
+          } else {
+            return task;
+          }
+        })
+        return idSelectorArray;
       
       default: 
         return state;

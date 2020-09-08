@@ -35,7 +35,13 @@ const ToDoList = () => {
       </form>
       <div>
         {initialToDo.map(task => {
-          return <ToDoCard item={task.item} key={task.id} />
+          return <ToDoCard 
+            key={task.id}
+            id={task.id}
+            item={task.item}
+            completed={task.completed}
+            dispatch={dispatch} 
+            />
         })}
       </div>
     </div>
