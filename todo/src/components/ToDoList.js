@@ -32,6 +32,11 @@ const ToDoList = () => {
         <button 
           type="submit"
         >Submit</button>
+        <button 
+          onClick={() => {
+            dispatch({ type: 'CLEAR_COMPLETED'})
+          }}
+        >Clear Completed</button>
       </form>
       <div>
         {initialToDo.map(task => {

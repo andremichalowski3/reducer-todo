@@ -39,6 +39,11 @@ export const initialState = [
           }
         })
         return idSelectorArray;
+
+      case 'CLEAR_COMPLETED':
+        console.log('CLEAR_COMPLETED IN toDoReducer');
+        let filteredArray = state.filter(task => task.completed === false)
+        return filteredArray;
       
       default: 
         return state;
