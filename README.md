@@ -63,9 +63,9 @@
 
   ## Task 2c: Adding todos
 
-  - [] Build a form to add todos to your list
-  - Build a function that will dispatch an action to add a new todo
-  - Write the `case` in your reducer for adding a todo (You can create a unique id with `new Date()`)
+  - [x] Build a form to add todos to your list
+  - [x] Build a function that will dispatch an action to add a new todo
+  - [x] Write the `case` in your reducer for adding a todo (You can create a unique id with `new Date()`)
 
   ...............................................................................................................................................................................................................................
 

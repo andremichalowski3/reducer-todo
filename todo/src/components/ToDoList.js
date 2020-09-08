@@ -1,16 +1,43 @@
-import React, { useReducer } from 'react';
-import { initialState, todoReducer } from '../reducers/todoReducer';
+import React, { useReducer, useState } from 'react';
+import { initialState, toDoReducer } from '../reducers/todoReducer';
+
 import ToDoCard from './ToDoCard';
+// import Form from './../components/Form';
 
 const ToDoList = () => {
-  const [initialTodo, dispatch] = useReducer(todoReducer, initialState);
-  // console.log('initialTodo state for ToDoList', initialTodo);
-  
+  const [initialToDo, dispatch] = useReducer(toDoReducer, initialState);
+  const [newTask, setNewTask] = useState('')
+
+  // const handleChanges = e => {
+  //   setNewTask(e.target.value);
+  // }
+  // // console.log(newTask)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch({ type: 'CREATE_TASK', payload: newTask})
+    setNewTask('');
+  }
+
   return(
     <div>
-      {initialTodo.map(task => {
-        return <ToDoCard item={task.item} key={task.id} />
-      })}
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="text">New Task:</label>
+        <input 
+          type='text'
+          name='newTask'
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+        />
+        <button 
+          type="submit"
+        >Submit</button>
+      </form>
+      <div>
+        {initialToDo.map(task => {
+          return <ToDoCard item={task.item} key={task.id} />
+        })}
+      </div>
     </div>
   )
 }

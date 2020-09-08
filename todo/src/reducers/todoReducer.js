@@ -16,9 +16,18 @@ export const initialState = [
     },
   ]
 
-  export const todoReducer = (state, action) => {
-    console.log(state, action);
+  export const toDoReducer = (state, action) => {
+    // console.log(state, action);
     switch(action.type) {
+      case 'CREATE_TASK':
+        // console.log(state, action)
+        console.log('CREATE_TASK in toDoReducer')
+        return [
+          ...state,
+          { item: action.payload,
+          completed: false,
+          id: Date.now()}
+        ]
       
       default: 
         return state;
