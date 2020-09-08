@@ -1,4 +1,4 @@
-export const initialTodos = {[
+export const initialState = [
     {
       item: "Learn about reducers",
       completed: false,
@@ -16,8 +16,9 @@ export const initialTodos = {[
     },
   ]
 
-  export const reducer = (state, action) => {
-    switch() {
+  export const todoReducer = (state, action) => {
+    console.log(state, action);
+    switch(action.type) {
       
       default: 
         return state;
